@@ -1,22 +1,23 @@
-# unp[unix 网络环境编程]学习 vscode环境搭建
-
-# 参考资料
-
-- [我的学习记录以及代码](https://github.com/Layty/unp)
-- [原书代码](https://github.com/unpbook/unpv13e) 
-
 # 开坑unp[unix 网络环境编程]学习
 
-# 环境搭建
+## Github
+
+- [我的学习记录以及代码](https://github.com/Layty/unp)
+- [原书代码](https://github.com/unpbook/unpv13e)
+
+## unp[unix 网络环境编程]学习 vscode环境搭建
+
 1. vscode 下载安装 `Native Debug`,f5打开调试配置,或者按照我的文件直接覆盖就行
 2. 参考`.vscode`的两个文件,其中`launch`不用修改
 3. 如果想自己每次重新编译书本的源码,不使用默认的`Makefie`,则需修改`task.json`,这里主要就是增加头文件的路径和链接库的路径,这个参数定义在`unpv13e/Make.defines`
 4. 这个参数其实可以随便找个`Makefile` 打印变量即可,我这里修改打印看了下
-   ```
-   dbg:	
+
+   ```Makefile
+   dbg:
 	echo${CC} ${CFLAGS} -o $@ daytimetcpcli.o ${LIBS}
     # echo gcc -I../lib -g -O2 -D_REENTRANT -Wall -o dbg daytimetcpcli.o ../libunp.a -lpthread
    ```
+
    ```json
     {
         "tasks": [
