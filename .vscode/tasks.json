@@ -4,10 +4,13 @@
             "type": "shell",
             "label": "gcc build active file",
             "command": "/usr/bin/gcc",
+            // echo gcc -I../lib -g -O2 -D_REENTRANT -Wall -o dbg daytimetcpcli.o ../libunp.a -lpthread
             "args": [
                 "-ggdb3",
                 "-I",
                 "${fileDirname}/../lib",
+                "-D_REENTRANT",
+                "-Wall",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
