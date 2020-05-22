@@ -46,7 +46,7 @@ main(int argc, char **argv)
 	Bind(listenfd, (SA *) &servaddr, sizeof(servaddr));
 
 	Listen(listenfd, LISTENQ);
-    signal(SIGCHLD,sig_chld);       // linux下这个系统调用被中断会恢复,accept不会出错
+    signal(SIGCHLD,sig_chld);       // linux下这个系统调用被中断会恢复,accept不会出错,测试的时候屏蔽了lib/signal.c
     // Signal(SIGCHLD,sig_chld);   //两个进程都可收到这个信号,但是这里只有父进程会,
     //                             //他会回收子进程,然后中断accept
 
