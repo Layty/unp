@@ -1,6 +1,14 @@
 /* include readline */
 #include	"unp.h"
 
+/*
+	read_buf[MAXLINE]; 内部缓存
+	read_cnt 缓冲中还没被读取的个数,0表示都读取过了
+	read_ptr 指向下次要读取的字符的位置
+	my_read 当read_cnt=0 也就是缓存无数据会更新数据,否则从缓存中读取一个字节
+*/
+
+
 static int	read_cnt;
 static char	*read_ptr;
 static char	read_buf[MAXLINE];

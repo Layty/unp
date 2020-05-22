@@ -76,3 +76,8 @@
     ]
     }
    ```
+## 子进程调试
+https://www.ibm.com/developerworks/cn/linux/l-cn-gdbmp/
+```
+set follow-fork-mode child
+```

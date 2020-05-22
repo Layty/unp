@@ -1,5 +1,8 @@
 {
     "files.associations": {
-        "unp.h": "c"
-    }
+        "*.make": "makefile",
+        "unp.h": "c",
+        "cstdarg": "cpp"
+    },
+    "editor.formatOnSave": true
 }
